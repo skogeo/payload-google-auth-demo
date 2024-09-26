@@ -7,6 +7,20 @@ const Users: CollectionConfig = {
     useAsTitle: 'email',
   },
   fields: [
+    {
+      name: "sub",
+      label: "sub",
+      type: "text",
+      admin: { readOnly: true },
+      access: { update: () => false },
+    },
+    {
+      name: "pictureURL",
+      label: "pictureURL",
+      type: "text",
+      admin: { readOnly: true },
+      access: { update: () => false },
+    }
     // Email added by default
     // Add more fields as needed
   ],

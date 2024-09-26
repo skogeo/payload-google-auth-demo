@@ -9,12 +9,16 @@ import { buildConfig } from 'payload/config'
 import Users from './collections/Users'
 import CustomDefaultRoute from './views/CustomDefaultRoute'
 import CustomLink from './components/CustomLink'
+import GoogleLoginButton from './components/GoogleLoginButton'
 
 export default buildConfig({
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
     components: {
+      afterLogin: [
+        GoogleLoginButton,
+      ],
       afterNavLinks: [
         CustomLink
       ],

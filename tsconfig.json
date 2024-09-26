@@ -11,10 +11,15 @@
     "jsx": "react",
     "paths": {
       "payload/generated-types": ["./src/payload-types.ts"],
-       "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
-  "include": ["src"],
+  "include": ["src", "src/global.d.ts"],
   "exclude": ["node_modules", "dist", "build"],
   "ts-node": {
     "transpileOnly": true,
